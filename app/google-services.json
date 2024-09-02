@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "953707244478",
+    "project_id": "golden-palace-app",
+    "storage_bucket": "golden-palace-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:953707244478:android:3ae6c80016fe16a44167ef",
+        "android_client_info": {
+          "package_name": "com.goldenpalace.teladelogin"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxll36WO6DmhoIfZDRlYBvz3oaK8KuOIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
