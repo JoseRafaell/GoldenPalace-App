@@ -13,9 +13,16 @@
         android:theme="@style/Theme.TelaDeLogin"
         tools:targetApi="31">
         <activity
-            android:name=".FormCardapio"> </activity>
+            android:name=".FormEsqueciSenhaEmail"
+            android:exported="false" />
         <activity
-            android:name=".FormPerfil" />
+            android:name=".FormReserva"
+            android:exported="false" />
+        <activity
+            android:name=".FormFaleConosco"
+            android:exported="false" />
+        <activity android:name=".FormCardapio" />
+        <activity android:name=".FormPerfil" />
         <activity
             android:name=".FormCadastro"
             android:exported="false" />

@@ -3,4 +3,10 @@
     <string name="entrar">Entrar</string>
     <string name="text_cadastro">Não tem uma conta? Inscreva-se</string>
     <string name="title_cadastro">Cadastre-se</string>
+    <string name="title_faleconosco">Fale Conosco</string>
+    <string name="text_tipo_mensagem">Tipo da Mensagem</string>
+    <string name="text_mensagem">Mensagem</string>
+    <string name="title_reserva">Reserva</string>
+    <string name="title_esqueciSenha">Recuperar Senha</string>
+    <string name="text_esqueciSenha">Digite seu email para enviarmos um código de verificação</string>
 </resources>

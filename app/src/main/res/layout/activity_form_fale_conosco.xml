@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud"
+    tools:context=".FormFaleConosco">
+
+    <TextView
+        android:id="@+id/title_faleconosco"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_faleconosco"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="70dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <View
+        android:id="@+id/containerComponentsFaleconosco"
+        style="@style/ContainerComponentsFaleconosco"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title_faleconosco" />
+
+    <EditText
+        android:id="@+id/edit_email_faleconosco"
+        style="@style/Edit_Text_faleconosco"
+        android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:drawableRight="@drawable/ic_email"
+        app:layout_constraintTop_toTopOf="@id/containerComponentsFaleconosco"
+        app:layout_constraintStart_toStartOf="@id/containerComponentsFaleconosco"
+        app:layout_constraintEnd_toEndOf="@id/containerComponentsFaleconosco"/>
+
+    <TextView
+        android:id="@+id/text_tipo_mensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_tipo_mensagem"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="80dp"
+        app:layout_constraintTop_toTopOf="@id/edit_email_faleconosco"
+        app:layout_constraintStart_toStartOf="@id/edit_email_faleconosco"
+        app:layout_constraintEnd_toEndOf="@id/edit_email_faleconosco"
+        />
+
+
+    <CheckBox
+        android:id="@+id/checkBox1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sugestão"
+        tools:layout_editor_absoluteX="54dp"
+        tools:layout_editor_absoluteY="308dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Critíca"
+        tools:layout_editor_absoluteX="157dp"
+        tools:layout_editor_absoluteY="308dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Observação"
+        tools:layout_editor_absoluteX="241dp"
+        tools:layout_editor_absoluteY="308dp" />
+
+    <TextView
+        android:id="@+id/text_mensagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_mensagem"
+        android:textSize="25sp"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:layout_marginTop="60dp"
+        app:layout_constraintTop_toTopOf="@id/checkBox2"
+        app:layout_constraintStart_toStartOf="@id/checkBox2"
+        app:layout_constraintEnd_toEndOf="@id/checkBox2"
+        />
+
+    <EditText
+        android:id="@+id/edit_caixa_mensagem"
+        style="@style/Edit_caixa_Msg"
+        android:hint="Escreva sua mensagem"
+        android:inputType="textEmailAddress"
+        android:drawableRight="@drawable/ic_email"
+        app:layout_constraintTop_toTopOf="@id/text_mensagem"
+        app:layout_constraintStart_toStartOf="@id/text_mensagem"
+        app:layout_constraintEnd_toEndOf="@id/text_mensagem"/>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_Enviar_Msg"
+        style="@style/Buttom_Msg"
+        android:layout_marginTop="65dp"
+        android:text="Enviar"
+        app:layout_constraintTop_toBottomOf="@id/containerComponentsFaleconosco"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>
