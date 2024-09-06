@@ -40,7 +40,7 @@ public class FormCadastro extends AppCompatActivity {
         setContentView(R.layout.activity_form_cadastro);
 
         //getSupportActionBar().hide();
-//        IniciarComponentes();
+        IniciarComponentes();
 
         bt_cadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
