@@ -28,7 +28,7 @@ import java.util.Map;
 
 public class FormCadastro extends AppCompatActivity {
 
-    private EditText edit_nome,edit_email,edit_senha,edit_telefone,editdataNasc;
+    private EditText edit_nome,edit_email,edit_senha,edit_telefone,edit_dataNasc;
     private Button bt_cadastrar;
     String[] mensagens = {"Preencha todos os campos", "Cadastro realizado com sucesso!"};
     String usuarioID;
@@ -50,7 +50,7 @@ public class FormCadastro extends AppCompatActivity {
                 String email = edit_email.getText().toString();
                 String senha = edit_senha.getText().toString();
                 String telefone = edit_telefone.toString();
-                String dataNasc = editdataNasc.toString();
+                String dataNasc = edit_dataNasc.toString();
 
                 if(nome.isEmpty() || email.isEmpty() || senha.isEmpty() || telefone.isEmpty() || dataNasc.isEmpty()){
                     Snackbar snackbar = Snackbar.make(v,mensagens[0],Snackbar.LENGTH_SHORT);
@@ -116,7 +116,7 @@ public class FormCadastro extends AppCompatActivity {
     private void SalvarDadosUsuario(){
         String nome = edit_nome.getText().toString();
         String telefone = edit_telefone.toString();
-        String dataNasc = editdataNasc.toString();
+        String dataNasc = edit_dataNasc.toString();
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -146,7 +146,7 @@ public class FormCadastro extends AppCompatActivity {
         edit_email = findViewById(R.id.edit_email);
         edit_senha = findViewById(R.id.edit_senha);
         edit_telefone = findViewById(R.id.edit_telefone);
-        editdataNasc = findViewById(R.id.edit_dataNasc);
+        edit_dataNasc = findViewById(R.id.edit_dataNasc);
         bt_cadastrar = findViewById(R.id.bt_cadastrar);
 
 }

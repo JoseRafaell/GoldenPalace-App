@@ -80,7 +80,7 @@
         app:layout_constraintEnd_toEndOf="@id/containerComponentsReserva"/>
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_Enviar_reserva"
+        android:id="@+id/bt_enviar_reserva"
         style="@style/Buttom"
         android:layout_marginTop="30dp"
         android:text="Enviar"

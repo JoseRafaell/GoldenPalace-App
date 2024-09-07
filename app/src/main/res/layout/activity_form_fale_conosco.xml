@@ -59,24 +59,25 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Sugestão"
-        tools:layout_editor_absoluteX="54dp"
-        tools:layout_editor_absoluteY="308dp" />
+        app:layout_constraintStart_toStartOf="@+id/edit_email_faleconosco"
+        app:layout_constraintTop_toBottomOf="@+id/text_tipo_mensagem" />
 
     <CheckBox
         android:id="@+id/checkBox2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Critíca"
-        tools:layout_editor_absoluteX="157dp"
-        tools:layout_editor_absoluteY="308dp" />
+        app:layout_constraintTop_toBottomOf="@id/text_tipo_mensagem"
+        app:layout_constraintStart_toStartOf="@id/text_tipo_mensagem"
+        app:layout_constraintEnd_toEndOf="@id/text_tipo_mensagem" />
 
     <CheckBox
         android:id="@+id/checkBox3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Observação"
-        tools:layout_editor_absoluteX="241dp"
-        tools:layout_editor_absoluteY="308dp" />
+        app:layout_constraintTop_toBottomOf="@id/text_tipo_mensagem"
+        app:layout_constraintEnd_toEndOf="@id/edit_email_faleconosco" />
 
     <TextView
         android:id="@+id/text_mensagem"
