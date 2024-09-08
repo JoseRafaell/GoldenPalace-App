@@ -1,6 +1,5 @@
 package com.goldenpalace.teladelogin;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.graphics.Color;
@@ -9,11 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
-import com.google.firebase.auth.AuthResult;
-import com.google.firebase.auth.FirebaseAuth;
 
 public class FormReserva extends AppCompatActivity {
 
@@ -53,6 +48,7 @@ public class FormReserva extends AppCompatActivity {
         edit_pessoas = findViewById(R.id.edit_pessoas);
         edit_horario = findViewById(R.id.edit_horario);
         edit_observacoes = findViewById(R.id.edit_observacoes);
+        bt_enviar_reserva = findViewById(R.id.bt_enviar_reserva);
             }
         }
 

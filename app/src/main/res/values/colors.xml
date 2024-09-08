@@ -5,5 +5,12 @@
     <color name="Dourado">#ffd700</color>
     <color name="red">#ff0000</color>
     <color name="orange">#F49C1B</color>
+    <color name="marrom">#472805</color>
     <color name="crimson">#AF0404</color>
+    <color name="bege">#ECA731</color>
+    <color name="gray">#423F3A</color>
+    <color name="grayDark">#333230</color>
+
+
+
 </resources>
