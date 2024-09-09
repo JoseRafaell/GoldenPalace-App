@@ -17,7 +17,7 @@ public class FormMenu extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_menu);
 
-        IniciarComponentes2();
+        IniciarComponentes();
 
         bt_Next.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,7 +29,7 @@ public class FormMenu extends AppCompatActivity {
         });
     }
 
-    private void IniciarComponentes2() {
+    private void IniciarComponentes() {
         bt_Next = findViewById(R.id.bt_Next);
     }
 }

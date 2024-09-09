@@ -2,6 +2,7 @@ package com.goldenpalace.teladelogin;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
@@ -13,7 +14,7 @@ import com.google.android.material.snackbar.Snackbar;
 public class FormFaleConosco extends AppCompatActivity {
 
     private EditText edit_email_faleconosco,edit_caixa_mensagem;
-    private Button bt_Enviar_Msg;
+    private Button bt_Enviar_Msg,bt_Voltar_faleConosco;
     String[] mensagens = {"Preencha todos os campos"};
 
 
@@ -22,7 +23,17 @@ public class FormFaleConosco extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_fale_conosco);
 
-        IniciarComponentes4();
+        IniciarComponentes();
+
+        bt_Voltar_faleConosco.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(FormFaleConosco.this, FormHome.class);
+                startActivity(intent);
+            }
+        });
+
 
         bt_Enviar_Msg.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -42,11 +53,12 @@ public class FormFaleConosco extends AppCompatActivity {
             }
         });
     }
-    private void IniciarComponentes4(){
+    private void IniciarComponentes(){
 
         bt_Enviar_Msg = findViewById(R.id.bt_Enviar_Msg);
         edit_email_faleconosco = findViewById(R.id.edit_email_faleconosco);
         edit_caixa_mensagem = findViewById(R.id.edit_caixa_mensagem);
+        bt_Voltar_faleConosco = findViewById(R.id.bt_Voltar_faleConosco);
     }
 }
 

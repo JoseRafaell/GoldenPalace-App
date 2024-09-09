@@ -3,6 +3,7 @@ package com.goldenpalace.teladelogin;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
@@ -46,6 +47,8 @@ public class FormCadastro extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
+
+
                 String nome = edit_nome.getText().toString();
                 String email = edit_email.getText().toString();
                 String senha = edit_senha.getText().toString();
@@ -84,6 +87,8 @@ public class FormCadastro extends AppCompatActivity {
                     snackbar.setBackgroundTint(Color.BLACK);
                     snackbar.setTextColor(Color.GREEN);
                     snackbar.show();
+                    Intent intent = new Intent(FormCadastro.this, FormLogin.class);
+                    startActivity(intent);
                 }else{
                     String erro;
                     try {

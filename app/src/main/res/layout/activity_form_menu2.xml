@@ -15,8 +15,8 @@
         app:cardElevation="8dp"
         app:cardBackgroundColor="@color/white"
         android:layout_margin="25dp"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/bt_Voltar_menu2"        app:layout_constraintStart_toStartOf="parent"
+
         >
 
         <ImageView
@@ -36,9 +36,10 @@
         android:textColor="@color/crimson"
         android:textSize="25sp"
         android:textStyle="bold"
-        android:layout_margin="20dp"
+       android:layout_marginLeft="20dp"
+        android:layout_marginTop="70dp"
         app:layout_constraintStart_toEndOf="@id/ContainerImgCardapio3"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toTopOf="@id/bt_Voltar_menu2"/>
 
     <TextView
         android:id="@+id/txtFoodDescricao3"
@@ -260,12 +261,14 @@
         />
 
     <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt_Voltar"
+        android:id="@+id/bt_Voltar_menu2"
         style="@style/ButtomVoltar"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="12dp"
         android:text="Voltar"
-        app:layout_constraintTop_toBottomOf="@id/btAdd5"
-        app:layout_constraintEnd_toEndOf="@id/txtFoodDescricao5"
-        app:layout_constraintStart_toEndOf="@id/txtPreco5"
+        android:drawableLeft="@drawable/ic_arrow_left"
+        android:drawableTint="@color/white"
+        app:layout_constraintStart_toStartOf="@id/ContainerImgCardapio3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -103,7 +103,6 @@
         app:layout_constraintStart_toStartOf="@id/text_mensagem"
         app:layout_constraintEnd_toEndOf="@id/text_mensagem"/>
 
-
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/bt_Enviar_Msg"
         style="@style/Buttom_Msg"
@@ -112,5 +111,17 @@
         app:layout_constraintTop_toBottomOf="@id/containerComponentsFaleconosco"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_Voltar_faleConosco"
+        style="@style/ButtomVoltar"
+        android:layout_marginTop="12dp"
+        android:text="Voltar"
+        android:drawableLeft="@drawable/ic_arrow_left"
+        android:drawableTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
 </androidx.constraintlayout.widget.ConstraintLayout>
