@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroud"
+    tools:context=".FormEsqueciSenhaAlterar">
+
+    <TextView
+        android:id="@+id/title_esqueciSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/title_esqueciSenha"
+        android:textSize="50sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    <TextView
+        android:id="@+id/text_esqueciSenhaAlterar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_esqueciSenhaAlterar"
+        android:textSize="25sp"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:layout_marginTop="20dp"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="@id/title_esqueciSenha"
+        app:layout_constraintEnd_toEndOf="@id/title_esqueciSenha"
+        app:layout_constraintTop_toBottomOf="@id/title_esqueciSenha"
+        />
+
+    <View
+        android:id="@+id/containerComponentsEsqueciSenha"
+        style="@style/ContainerComponentsEsqueciSenhaAlterar"
+        app:layout_constraintTop_toBottomOf="@+id/text_esqueciSenhaAlterar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <EditText
+        android:id="@+id/edit_alterar_esqueciSenha"
+        style="@style/Edit_Text_esqueciSenhaAlterar"
+        android:hint="Digite sua nova senha..."
+        android:inputType="number"
+        android:drawableRight="@drawable/ic_eye"
+        app:layout_constraintTop_toTopOf="@id/containerComponentsEsqueciSenha"
+        app:layout_constraintStart_toStartOf="@id/containerComponentsEsqueciSenha"
+        app:layout_constraintEnd_toEndOf="@id/containerComponentsEsqueciSenha"/>
+
+    <EditText
+        android:id="@+id/edit_confirmar_esqueciSenha"
+        style="@style/Edit_Text_esqueciSenhaAlterar"
+        android:hint="Confirme sua nova senha..."
+        android:inputType="number"
+        android:drawableRight="@drawable/ic_eye"
+        app:layout_constraintTop_toBottomOf="@id/edit_alterar_esqueciSenha"
+        app:layout_constraintStart_toStartOf="@id/edit_alterar_esqueciSenha"
+        />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/bt_Confirmar_esqueciSenhaAlterar"
+        style="@style/Buttom"
+        android:layout_marginTop="80dp"
+        android:text="Confirmar"
+        app:layout_constraintTop_toBottomOf="@id/containerComponentsEsqueciSenha"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

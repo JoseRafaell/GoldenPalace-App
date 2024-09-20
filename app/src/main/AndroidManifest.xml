@@ -2,7 +2,10 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
+        android:usesCleartextTraffic="true"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -13,8 +16,37 @@
         android:theme="@style/Theme.TelaDeLogin"
         tools:targetApi="31">
         <activity
-            android:name=".FormPerfil"
+            android:name=".FormHome"
+            android:exported="true"/> >
+
+        <activity
+            android:name=".FormEsqueciSenhaAlterar"
             android:exported="false" />
+        <activity
+            android:name=".FormMenu2"
+            android:exported="false" />
+        <activity
+            android:name=".FormMenu"
+            android:exported="true" />
+        <activity
+            android:name=".FormEsqueciSenhaCod"
+            android:exported="false" />
+        <activity
+            android:name=".FormEsqueciSenhaEmail"
+            android:exported="true" />
+        <activity
+            android:name=".FormReserva"
+            android:exported="true" />
+        <activity
+            android:name=".FormFaleConosco"
+            android:exported="true"/>
+
+        <activity
+            android:name=".FormCardapio"
+            android:exported="true" />
+        <activity
+            android:name=".FormPerfil"
+            android:exported="true" />
         <activity
             android:name=".FormCadastro"
             android:exported="false" />
@@ -30,6 +62,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
     </application>
 
 </manifest>

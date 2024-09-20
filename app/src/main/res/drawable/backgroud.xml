@@ -6,7 +6,6 @@
         android:centerColor="@color/orange"
         android:endColor="@color/orange"
         android:angle="45"
-
     />
 
 

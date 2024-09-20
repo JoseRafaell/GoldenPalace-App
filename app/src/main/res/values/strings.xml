@@ -3,4 +3,15 @@
     <string name="entrar">Entrar</string>
     <string name="text_cadastro">Não tem uma conta? Inscreva-se</string>
     <string name="title_cadastro">Cadastre-se</string>
+    <string name="title_faleconosco">Fale Conosco</string>
+    <string name="text_tipo_mensagem">Tipo da Mensagem</string>
+    <string name="text_mensagem">Mensagem</string>
+    <string name="title_reserva">Reserva</string>
+    <string name="title_esqueciSenha">Recuperar Senha</string>
+    <string name="text_esqueciSenha">Digite seu email para enviarmos um código de verificação</string>
+    <string name="text_esqueciSenhaCod">Digite o código que enviamos no seu Email</string>
+    <string name="text_esqueciSenhaAlterar">Agora que seu email foi verificado e confirmamos  que é você mesmo que está fazendo alterações, digite uma nova senha.</string>
+    <string name="title_home">Golden Palace</string>
+    <string name="text_home">O melhor site de reserva de São Paulo !</string>
+    <string name="text_home2"> Poupe seu tempo, reserve remotamente e desfrute a comida </string>
 </resources>
