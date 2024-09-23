@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -29,7 +30,7 @@ import java.util.Map;
 
 public class FormCadastro extends AppCompatActivity {
 
-    private EditText edit_nome,edit_email,edit_senha,edit_telefone,edit_dataNasc;
+    private EditText edit_nome,edit_email,edit_senha,edit_telefone,edit_dataNasc,edit_cpf;
     private Button bt_cadastrar;
     String[] mensagens = {"Preencha todos os campos", "Cadastro realizado com sucesso!"};
     String usuarioID;
@@ -40,7 +41,7 @@ public class FormCadastro extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form_cadastro);
 
-        //getSupportActionBar().hide();
+
         IniciarComponentes();
 
         bt_cadastrar.setOnClickListener(new View.OnClickListener() {
@@ -54,8 +55,9 @@ public class FormCadastro extends AppCompatActivity {
                 String senha = edit_senha.getText().toString();
                 String telefone = edit_telefone.toString();
                 String dataNasc = edit_dataNasc.toString();
+                String cpf = edit_cpf.toString();
 
-                if(nome.isEmpty() || email.isEmpty() || senha.isEmpty() || telefone.isEmpty() || dataNasc.isEmpty()){
+                if(nome.isEmpty() || email.isEmpty() || senha.isEmpty() || telefone.isEmpty() || dataNasc.isEmpty() || cpf.isEmpty()){
                     Snackbar snackbar = Snackbar.make(v,mensagens[0],Snackbar.LENGTH_SHORT);
                     snackbar.setBackgroundTint(Color.BLACK);
                     snackbar.setTextColor(Color.RED);
@@ -89,7 +91,9 @@ public class FormCadastro extends AppCompatActivity {
                     snackbar.show();
                     Intent intent = new Intent(FormCadastro.this, FormLogin.class);
                     startActivity(intent);
-                }else{
+
+
+                } else{
                     String erro;
                     try {
                         throw task.getException();
@@ -106,6 +110,8 @@ public class FormCadastro extends AppCompatActivity {
                         erro = "Erro ao cadastrar usuario";
                     }
 
+
+
                     Snackbar snackbar = Snackbar.make(v,erro,Snackbar.LENGTH_SHORT);
                     snackbar.setBackgroundTint(Color.BLACK);
                     snackbar.setTextColor(Color.RED);
@@ -120,8 +126,9 @@ public class FormCadastro extends AppCompatActivity {
 
     private void SalvarDadosUsuario(){
         String nome = edit_nome.getText().toString();
-        String telefone = edit_telefone.toString();
-        String dataNasc = edit_dataNasc.toString();
+        String telefone = edit_telefone.getText().toString();
+        String dataNasc = edit_dataNasc.getText().toString();
+        String cpf = edit_cpf.getText().toString();
 
         FirebaseFirestore db = FirebaseFirestore.getInstance();
 
@@ -129,6 +136,7 @@ public class FormCadastro extends AppCompatActivity {
         usuarios.put("nome",nome);
         usuarios.put("telefone",telefone);
         usuarios.put("dataNasc",dataNasc);
+        usuarios.put("cpf",cpf);
 
         usuarioID = FirebaseAuth.getInstance().getCurrentUser().getUid();
         DocumentReference documentReference = db.collection("Usuarios").document(usuarioID);
@@ -152,6 +160,7 @@ public class FormCadastro extends AppCompatActivity {
         edit_senha = findViewById(R.id.edit_senha);
         edit_telefone = findViewById(R.id.edit_telefone);
         edit_dataNasc = findViewById(R.id.edit_dataNasc);
+        edit_cpf = findViewById(R.id.edit_cpf);
         bt_cadastrar = findViewById(R.id.bt_cadastrar);
 
 }

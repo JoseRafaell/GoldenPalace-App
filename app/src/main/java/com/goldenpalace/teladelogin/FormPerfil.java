@@ -19,7 +19,7 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 public class FormPerfil extends AppCompatActivity {
 
     private Button bt_deslogar,bt_Voltar_perfil;
-    private TextView nomeUsuario,emailUsuario;
+    private TextView nomeUsuario,emailUsuario,cpfUsuario,telefoneUsuario,dataNascUsuario;
     FirebaseFirestore db = FirebaseFirestore.getInstance();
     String usuarioID;
 
@@ -63,6 +63,9 @@ public class FormPerfil extends AppCompatActivity {
             if (documentSnapshot != null){
                 nomeUsuario.setText(documentSnapshot.getString("nome"));
                 emailUsuario.setText(email);
+                cpfUsuario.setText(documentSnapshot.getString("cpf"));
+                dataNascUsuario.setText(documentSnapshot.getString("dataNasc"));
+                telefoneUsuario.setText(documentSnapshot.getString("telefone"));
             }
             }
         });
@@ -73,5 +76,8 @@ public class FormPerfil extends AppCompatActivity {
         bt_Voltar_perfil = findViewById(R.id.bt_Voltar_perfil);
         nomeUsuario = findViewById(R.id.textNomeUsuario);
         emailUsuario = findViewById(R.id.textEmailUsuario);
+        cpfUsuario = findViewById(R.id.textCPFUsuario);
+        telefoneUsuario = findViewById(R.id.textTelefoneUsuario);
+        dataNascUsuario = findViewById(R.id.textdataNascUsuario);
     }
 }
