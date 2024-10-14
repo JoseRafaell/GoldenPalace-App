@@ -81,36 +81,40 @@ public class FormCadastro extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
 
-                if(task.isSuccessful()){
+                if (task.isSuccessful()) {
 
-                    SalvarDadosUsuario();
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+                            new FormLogin();
 
-                    Snackbar snackbar = Snackbar.make(v,mensagens[1],Snackbar.LENGTH_SHORT);
-                    snackbar.setBackgroundTint(Color.BLACK);
-                    snackbar.setTextColor(Color.GREEN);
-                    snackbar.show();
-                    Intent intent = new Intent(FormCadastro.this, FormLogin.class);
-                    startActivity(intent);
+                            SalvarDadosUsuario();
 
+                            Snackbar snackbar = Snackbar.make(v, mensagens[1], Snackbar.LENGTH_SHORT);
+                            snackbar.setBackgroundTint(Color.BLACK);
+                            snackbar.setTextColor(Color.GREEN);
+                            snackbar.show();
+                        }
+                    },5000);
+                           Intent intent = new Intent(FormCadastro.this, FormLogin.class);
+                            startActivity(intent);
 
-                } else{
+                } else {
                     String erro;
                     try {
                         throw task.getException();
 
-                    }catch (FirebaseAuthWeakPasswordException e) {
+                    } catch (FirebaseAuthWeakPasswordException e) {
                         erro = "Defina uma senha com no minino 6 caracteres";
 
-                    }catch (FirebaseAuthUserCollisionException e) {
+                    } catch (FirebaseAuthUserCollisionException e) {
                         erro = "Esta conta ja foi cadastrada";
 
-                    }catch (FirebaseAuthInvalidCredentialsException e){
+                    } catch (FirebaseAuthInvalidCredentialsException e) {
                         erro = "E-mail invalido";
-                    }catch (Exception e){
+                    } catch (Exception e) {
                         erro = "Erro ao cadastrar usuario";
                     }
-
-
 
                     Snackbar snackbar = Snackbar.make(v,erro,Snackbar.LENGTH_SHORT);
                     snackbar.setBackgroundTint(Color.BLACK);

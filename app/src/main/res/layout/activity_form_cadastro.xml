@@ -61,7 +61,7 @@
 
     <EditText
         android:id="@+id/edit_telefone"
-        style="@style/Edit_Text"
+        style="@style/Edit_Text_telefone"
         android:hint="Telefone"
         android:inputType="phone"
         android:drawableRight="@drawable/ic_phone"
@@ -71,7 +71,7 @@
 
     <EditText
         android:id="@+id/edit_dataNasc"
-        style="@style/Edit_Text"
+        style="@style/Edit_Text_dataNasc"
         android:hint="Data de Nascimento"
         android:inputType="date"
         android:drawableRight="@drawable/ic_date"
@@ -81,7 +81,7 @@
 
     <EditText
     android:id="@+id/edit_cpf"
-    style="@style/Edit_Text"
+    style="@style/Edit_Text_cpf"
     android:hint="CPF"
     android:inputType="number"
     android:drawableRight="@drawable/ic_user1"
