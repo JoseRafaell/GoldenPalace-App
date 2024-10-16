@@ -14,4 +14,6 @@
     <string name="title_home">Golden Palace</string>
     <string name="text_home">O melhor site de reserva de São Paulo !</string>
     <string name="text_home2"> Poupe seu tempo, reserve remotamente e desfrute a comida </string>
+    <string name="sucesso">Sucesso</string>
+
 </resources>
