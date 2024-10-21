@@ -21,7 +21,7 @@ public class conexao {
                 politica = new StrictMode.ThreadPolicy.Builder().permitAll().build();
                 StrictMode.setThreadPolicy(politica);
                 Class.forName("net.sourceforge.jtds.jdbc.Driver");
-                conn = DriverManager.getConnection("jdbc:jtds:sqlserver://26.130.29.241" +
+                conn = DriverManager.getConnection("jdbc:jtds:sqlserver://172.19.1.17 " +
                         "databaseName=bd_goldenpalace;user=sa;password=@ITB123456;");
                 Toast.makeText(ctx.getApplicationContext(),R.string.sucesso,
                         Toast.LENGTH_SHORT).show();
@@ -48,7 +48,7 @@ public class conexao {
 
             while(res.next()){
                 FormCadastro objNome = new FormCadastro();
-                //objNome.set(res,getString())
+               // objNome.set(res,getString())
             }
         }catch (Exception e){
             e.printStackTrace();
